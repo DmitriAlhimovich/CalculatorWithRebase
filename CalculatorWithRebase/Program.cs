@@ -9,7 +9,7 @@ namespace CalculatorWithRebase
             Console.WriteLine("Input number:");
             var number1 = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("Input operation (+, -, *):");
+            Console.WriteLine("Input operation (+, -, *, /):");
 
             var operation = Console.ReadLine()[0];
 
@@ -30,6 +30,9 @@ namespace CalculatorWithRebase
                     break;
                 case '*':
                     result = number1 * number2;
+                    break;
+                case '/':
+                    result = (double)number1 / number2;
                     break;
                 default:
                     throw new ArgumentException($"Operation not supported: {operation}");
